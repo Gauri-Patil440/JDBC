@@ -9,7 +9,7 @@ Display customer ID, name, email, and city.
 
 
 package jdbc;
-import java.util.*;
+//import java.util.*;
 import java.sql.*;
 public class FindCustomerWithoutOrders {
 
@@ -21,8 +21,6 @@ public class FindCustomerWithoutOrders {
 		
 		if(conn!=null)
 		{
-			Scanner sc=new Scanner(System.in);
-			
 			PreparedStatement stmt=conn.prepareStatement("SELECT c.c_id,c.c_name,c.email,c.city "
 					+ "FROM Customer c "
 					+ "LEFT JOIN orders o ON  c.c_id = o.c_id  "
